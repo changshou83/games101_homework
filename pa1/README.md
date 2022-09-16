@@ -1,0 +1,10 @@
+- Goals
+  - [x] 正确构建模型矩阵
+  - [x] 正确构建透视投影矩阵
+  - [x] 可以在当前框架下正确运行，并能看见变换后的三角形
+  - [x] 按下A或D键时能正确旋转，能使用命令行等到旋转结果图像
+  - [x] 【提高】能围绕任何过原点轴进行旋转
+- Links
+  - [别人的MVP变换笔记](https://blog.csdn.net/qq_43149051/article/details/105925787)
+  - [任意轴的三维旋转矩阵](https://blog.csdn.net/qq_44800780/article/details/102895109)
+  - [旋转公式推导](https://spaces.ac.cn/archives/2224)
