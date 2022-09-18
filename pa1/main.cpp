@@ -79,26 +79,31 @@ Eigen::Matrix4f get_projection_matrix(float eye_fov, float aspect_ratio,
     // TODO: Implement this function
     // Create the projection matrix for the given parameters.
     // Then return it.
-    float halfFov = eye_fov / (2 * 180.0) * MY_PI;
-    float t = zNear * tan(halfFov),
-          b = -t,
-          r = t * aspect_ratio,
-          l = -r;
+    // Students will implement this function
 
     persp2ortho << zNear, 0, 0, 0,
         0, zNear, 0, 0,
-        0, 0, zNear + zFar, -zNear * zFar,
+        0, 0, zNear + zFar, -1 * zNear * zFar,
         0, 0, 1, 0;
-    orthoScale << 2 / (r - l), 0, 0, 0,
-        0, 2 / (t - b), 0, 0,
+
+    double halfFov = eye_fov / (2 * 180.0f) * MY_PI;
+    double t = -1 * zNear * tan(halfFov), // multiply by -1 to show the result.
+        r = t * aspect_ratio;
+
+    // scale into "canonical" cube
+    orthoScale << 1 / r, 0, 0, 0,
+        0, 1 / t, 0, 0,
         0, 0, 2 / (zNear - zFar), 0,
         0, 0, 0, 1;
-    orthoTrans << 1, 0, 0, -(r + l) / 2,
-        0, 1, 0, -(t + b) / 2,
+
+    // center cuboid by translating
+    orthoTrans << 1, 0, 0, 0,
+        0, 1, 0, 0,
         0, 0, 1, -(zNear + zFar) / 2,
-        0, 0, 0, 0;
-    ortho = orthoScale * orthoTrans;
-    projection = ortho * persp2ortho;
+        0, 0, 0, 1;
+
+    matrixOrtho = orthoScale * orthoTrans;
+    projection = matrixOrtho * persp2ortho;
 
     return projection;
 }
