@@ -1,0 +1,8 @@
+- GoalS
+  - [x] 正确实现三角形栅格化算法(rasterize_triangle)
+  - [x] 正确测试点是否在三角形内(insideTriangle)
+  - [x] 正确实现z-buffer算法，将三角形按顺序画在屏幕上(rasterize_triangle)
+  - [x]【提高】使用SSAA实现抗锯齿，对每个像素采用 2 * 2 采样，注意点：像素需要维护深度值
+- Links
+  - [大佬的答案](https://github.com/Quanwei1992/GAMES101/tree/master/02)
+  - [关于习题的解析](https://its304.com/article/Antonioxv/124422982)
