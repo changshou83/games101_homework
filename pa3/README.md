@@ -1,0 +1,10 @@
+- Goals
+  - [x] 参数差值：正确插值颜色，法向量，纹理坐标，位置，并将他们传递给`fragment_shader_payload`
+  - [x] Blinn-Phong反射模型
+  - [x] Texture Mapping
+  - [x] Bump Mapping
+  - [ ] 【提高】尝试其他模型
+  - [x] 【提高】实现双线性插值
+- Links
+  - [大佬的笔记](https://www.yuque.com/gaoshanliushui-mbfny/sst4c5/gwoe13#4604ba29)
+  - [其他大佬的答案](https://zhuanlan.zhihu.com/p/460967740)
